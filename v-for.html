@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-for demo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
+	</script>
+	<script src="js/v-for.js"></script>
+	<!--
+	=========================================
+	Based off a tutorial by Ayo Isaiah
+	https://ayoisaiah.com/vuejs-todolist-app/
+	=========================================
+	-->
+</head>
+<body>
+	<div id="main">
+		<ol>
+			<li v-for="product in products">
+				{{  product.name }}
+			</li>
+		</ol>
+	</div>
+</body>
+</html>
