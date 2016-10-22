@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To-do List with Vue.js</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
+	</script>
+	<script src="js/todo.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<!--
+	=========================================
+	Based off a tutorial by Ayo Isaiah
+	https://ayoisaiah.com/vuejs-todolist-app/
+	=========================================
+	-->
+</head>
+<body>
+	<div class="container" id="todo">
+		<section class="panel">
+			<input type="checkbox" id="mark-all">
+			<input type="text" placeholder="What do you need to do?" autofocus class="text-input">
+			<button>Clear List</button>
+		</section>
+		<ul class="list">
+			<li>
+				<input type="checkbox" class="checkbox">
+				<label for="checkbox"></label>
+				<button class="delete">X</button>
+			</li>
+		</ul>
+		<div id="test">
+			<pre>{{ test }}</pre>
+		</div>
+	</div>
+</body>
+</html>
