@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>v-model demo</title>
+	<title>v-on demo</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
 	</script>
-	<script src="js/v-model.js"></script>
+	<script src="js/v-on.js"></script>
 	<!--
 	=========================================
 	Based off a tutorial by Ayo Isaiah
@@ -17,6 +17,7 @@
 	<div id="main">
 		<h3>Enter data here:</h3>
 		<input type="text" v-model="location">
+		<button v-on:click="alertLocation">Broadcast Location</button>
 		<br>
 		<h3>The model is updated here:</h3>
 		<pre>{{ $data }}</pre>
