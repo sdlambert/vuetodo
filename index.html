@@ -18,19 +18,20 @@
 <body>
 	<div class="container" id="todo">
 		<section class="panel">
-			<input type="checkbox" id="mark-all">
-			<input type="text" placeholder="What do you need to do?" autofocus class="text-input">
-			<button>Clear List</button>
+			<input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+			<input type="text" placeholder="What do you need to do?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+			<button v-on:click="clearList">Clear List</button>
 		</section>
 		<ul class="list">
-			<li>
-				<input type="checkbox" class="checkbox">
-				<label for="checkbox"></label>
-				<button class="delete">X</button>
+			<li v-for="task in taskList" v-bind:class="{done: task.checked}">
+				<input type="checkbox" class="checkbox" v-model="task.checked">
+				<label for="checkbox">{{ task.text }}</label>
+				<button class="delete" v-on:click="removeTask(task)">X</button>
 			</li>
 		</ul>
 		<div id="test">
-			<pre>{{ test }}</pre>
+			<pre>{{ newTask }}<br>{{ taskList }}
+			</pre>
 		</div>
 	</div>
 </body>
